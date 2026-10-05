@@ -1,7 +1,20 @@
 // =====================================
-// Site Cabinet Vétérinaire Watillon
+// Variables globales
 // =====================================
  
-document.addEventListener('DOMContentLoaded', () => {
-console.log('Site chargé avec succès');
-});
+ 
+ 
+// =====================================
+// Fonctions
+// =====================================
+ 
+function init() {
+console.log('Site chargé');
+}
+ 
+ 
+// =====================================
+// Initialisation
+// =====================================
+ 
+document.addEventListener('DOMContentLoaded', init);
