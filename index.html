@@ -1,44 +1,79 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="description"
+        content="Cabinet Vétérinaire Watillon : consultations, vaccination, chirurgie et conseils pour le bien-être de vos animaux."
+    >
+
     <title>Cabinet Vétérinaire Watillon</title>
 
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
     <header>
-        <div class="logo">
-            <h1>Cabinet Vétérinaire Watillon</h1>
-            <p>Le bien-être de vos animaux avant tout</p>
-        </div>
+        <div class="header-container">
 
-        <nav>
-<ul>
-    <li><a href="index.html">Accueil</a></li>
-    <li><a href="pages/services.html">Services</a></li>
-    <li><a href="pages/urgences.html">Urgences</a></li>
-    <li><a href="pages/a-propos.html">À propos</a></li>
-    <li><a href="pages/contact.html">Contact</a></li>
-</ul>
-</nav>
+            <div class="logo">
+                <h1>Cabinet Vétérinaire Watillon</h1>
+                <p>Le bien-être de vos animaux avant tout</p>
+            </div>
+
+            <nav aria-label="Navigation principale">
+                <ul>
+                    <li>
+                        <a class="active" href="index.html">Accueil</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/services.html">Services</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/urgences.html">Urgences</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/a-propos.html">À propos</a>
+                    </li>
+
+                    <li>
+                        <a href="pages/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+        </div>
     </header>
 
     <main>
 
         <section id="hero">
-            <h2>Bienvenue au Cabinet Vétérinaire Watillon</h2>
+            <div class="hero-content">
 
-            <p>
-                Nous accompagnons vos compagnons à chaque étape de leur vie :
-                médecine préventive, consultations, chirurgie et conseils personnalisés.
-            </p>
+                <p class="hero-introduction">
+                    Des soins attentifs pour vos compagnons
+                </p>
 
-            <a href="pages/contact.html">
-             Prendre rendez-vous
-            </a>
+                <h2>Bienvenue au Cabinet Vétérinaire Watillon</h2>
+
+                <p>
+                    Nous accompagnons vos compagnons à chaque étape de leur vie :
+                    médecine préventive, consultations, chirurgie et conseils
+                    personnalisés.
+                </p>
+
+                <a class="btn" href="pages/contact.html">
+                    Prendre rendez-vous
+                </a>
+
+            </div>
         </section>
 
         <section id="presentation">
@@ -60,77 +95,155 @@
 
                 <article>
                     <h3>Consultations</h3>
-                    <p>Examens de routine et suivi médical.</p>
+
+                    <p>
+                        Examens de routine, suivi médical et prise en charge
+                        personnalisée de votre animal.
+                    </p>
                 </article>
 
                 <article>
                     <h3>Vaccination</h3>
-                    <p>Protection et prévention des maladies.</p>
+
+                    <p>
+                        Protection et prévention des principales maladies
+                        tout au long de la vie de votre compagnon.
+                    </p>
                 </article>
 
                 <article>
                     <h3>Chirurgie</h3>
-                    <p>Interventions courantes et spécialisées.</p>
+
+                    <p>
+                        Interventions vétérinaires réalisées avec attention
+                        et suivi postopératoire.
+                    </p>
                 </article>
 
                 <article>
                     <h3>Conseils</h3>
-                    <p>Nutrition, comportement et bien-être animal.</p>
+
+                    <p>
+                        Conseils adaptés en matière de nutrition,
+                        de comportement et de bien-être animal.
+                    </p>
                 </article>
+
+            </div>
+
+            <div class="section-action">
+                <a class="btn btn-secondary" href="pages/services.html">
+                    Découvrir tous nos services
+                </a>
+            </div>
+
+        </section>
+
+        <section id="informations">
+
+            <div id="horaires">
+
+                <h2>Horaires</h2>
+
+                <ul>
+                    <li>
+                        <span>Lundi</span>
+                        <span>09h00 à 18h00</span>
+                    </li>
+
+                    <li>
+                        <span>Mardi</span>
+                        <span>09h00 à 18h00</span>
+                    </li>
+
+                    <li>
+                        <span>Mercredi</span>
+                        <span>09h00 à 18h00</span>
+                    </li>
+
+                    <li>
+                        <span>Jeudi</span>
+                        <span>09h00 à 18h00</span>
+                    </li>
+
+                    <li>
+                        <span>Vendredi</span>
+                        <span>09h00 à 18h00</span>
+                    </li>
+
+                    <li>
+                        <span>Samedi</span>
+                        <span>Sur rendez-vous</span>
+                    </li>
+
+                    <li>
+                        <span>Dimanche</span>
+                        <span>Fermé</span>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div id="urgence">
+
+                <h2>Une urgence ?</h2>
+
+                <p>
+                    En cas d’urgence vétérinaire, consultez notre page dédiée
+                    pour connaître les démarches à suivre et les coordonnées
+                    utiles.
+                </p>
+
+                <a class="btn btn-urgence" href="pages/urgences.html">
+                    Consulter la page des urgences
+                </a>
 
             </div>
 
         </section>
 
-        <section id="horaires">
-
-            <h2>Horaires</h2>
-
-            <ul>
-                <li>Lundi : 09h00 - 18h00</li>
-                <li>Mardi : 09h00 - 18h00</li>
-                <li>Mercredi : 09h00 - 18h00</li>
-                <li>Jeudi : 09h00 - 18h00</li>
-                <li>Vendredi : 09h00 - 18h00</li>
-                <li>Samedi : Sur rendez-vous</li>
-                <li>Dimanche : Fermé</li>
-            </ul>
-
-        </section>
-
-        <section id="urgence">
-
-            <h2>Urgences</h2>
-
-            <p>
-                En cas d'urgence vétérinaire, consultez notre page dédiée
-                ou contactez-nous immédiatement.
-            </p>
-
-            <a href="pages/urgences.html">
-            Voir les urgences
-            </a>
-
-        </section>
-
         <section id="contact">
 
-            <h2>Contact</h2>
+            <h2>Nous contacter</h2>
 
-            <p><strong>Adresse :</strong> À compléter</p>
-            <p><strong>Téléphone :</strong> À compléter</p>
-            <p><strong>Email :</strong> À compléter</p>
+            <div class="contact-grid">
+
+                <div>
+                    <h3>Adresse</h3>
+                    <p>À compléter</p>
+                </div>
+
+                <div>
+                    <h3>Téléphone</h3>
+
+                    <p>
+                        <a href="tel:+32XXXXXXXXX">
+                            À compléter
+                        </a>
+                    </p>
+                </div>
+
+                <div>
+                    <h3>Adresse e-mail</h3>
+
+                    <p>
+                        <a href="mailto:adresse@exemple.be">
+                            À compléter
+                        </a>
+                    </p>
+                </div>
+
+            </div>
 
         </section>
 
     </main>
 
     <footer>
-
         <p>
-            © 2026 Cabinet Vétérinaire Watillon - Tous droits réservés
+            © <span id="current-year">2026</span>
+            Cabinet Vétérinaire Watillon. Tous droits réservés.
         </p>
-
     </footer>
 
     <script src="js/script.js"></script>
