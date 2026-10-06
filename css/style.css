@@ -1,153 +1,480 @@
-{
-margin:0;
-padding:0;
-box-sizing:border-box;
+/* =========================
+RÉINITIALISATION
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
- 
+
+
+/* =========================
+VARIABLES
+========================= */
+
+:root {
+    --couleur-principale: #2e8b57;
+    --couleur-principale-foncee: #246f46;
+    --couleur-claire: #eef8f2;
+    --couleur-urgence: #b63c3c;
+    --couleur-urgence-foncee: #922f2f;
+    --couleur-texte: #333333;
+    --couleur-texte-clair: #666666;
+    --couleur-fond: #f5f7f5;
+    --couleur-blanche: #ffffff;
+    --couleur-footer: #26332c;
+}
+
+
 /* =========================
 GÉNÉRAL
 ========================= */
- 
-body{
-font-family: Arial, sans-serif;
-line-height:1.6;
-background:#f5f5f5;
-color:#333;
+
+html {
+    scroll-behavior: smooth;
 }
- 
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+section {
+    margin-bottom: 70px;
+}
+
+h1,
+h2,
+h3 {
+    line-height: 1.25;
+}
+
+h2 {
+    margin-bottom: 20px;
+    color: var(--couleur-principale);
+    font-size: 2rem;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+a {
+    color: var(--couleur-principale);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+}
+
+
 /* =========================
 HEADER
 ========================= */
- 
-header{
-background:#2E8B57;
-color:white;
-padding:30px 20px;
+
+header {
+    background-color: var(--couleur-principale);
+    color: var(--couleur-blanche);
+    padding: 25px 20px;
 }
- 
-.logo h1{
-margin-bottom:5px;
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
 }
- 
-.logo p{
-font-size:0.9rem;
+
+.logo h1 {
+    margin-bottom: 5px;
+    font-size: 2rem;
 }
- 
+
+.logo p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+
 /* =========================
 NAVIGATION
 ========================= */
- 
-nav{
-margin-top:15px;
+
+nav {
+    margin-top: 22px;
 }
- 
-nav ul{
-list-style:none;
-display:flex;
-flex-wrap:wrap;
-gap:20px;
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 25px;
+    list-style: none;
 }
- 
-nav a{
-color:white;
-text-decoration:none;
-font-weight:bold;
-transition:0.3s;
+
+nav a {
+    display: inline-block;
+    padding: 6px 0;
+    color: var(--couleur-blanche);
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition:
+        color 0.3s ease,
+        border-color 0.3s ease;
 }
- 
-nav a:hover{
-color:#ffe082;
+
+nav a:hover,
+nav a:focus,
+nav a.active {
+    color: #ffe082;
+    border-bottom-color: #ffe082;
 }
- 
+
+
 /* =========================
-CONTENU
+SECTION D’ACCUEIL
 ========================= */
- 
-main{
-max-width:1200px;
-margin:auto;
-padding:40px 20px;
+
+#hero {
+    padding: 70px 40px;
+    background:
+        linear-gradient(
+            135deg,
+            rgba(46, 139, 87, 0.95),
+            rgba(36, 111, 70, 0.92)
+        );
+    color: var(--couleur-blanche);
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.14);
 }
- 
-section{
-margin-bottom:60px;
+
+.hero-content {
+    max-width: 750px;
 }
- 
-h2{
-margin-bottom:15px;
-color:#2E8B57;
+
+#hero h2 {
+    color: var(--couleur-blanche);
+    font-size: 2.5rem;
 }
- 
-p{
-margin-bottom:15px;
+
+#hero p {
+    font-size: 1.1rem;
 }
- 
+
+.hero-introduction {
+    margin-bottom: 10px;
+    color: #d8f2e3;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+
+/* =========================
+MISSION
+========================= */
+
+#presentation {
+    max-width: 850px;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+#presentation p {
+    font-size: 1.1rem;
+    color: var(--couleur-texte-clair);
+}
+
+
 /* =========================
 BOUTONS
 ========================= */
- 
-.btn{
-display:inline-block;
-background:#2E8B57;
-color:white;
-text-decoration:none;
-padding:12px 20px;
-border-radius:8px;
-transition:0.3s;
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    background-color: var(--couleur-principale);
+    color: var(--couleur-blanche);
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid var(--couleur-principale);
+    border-radius: 8px;
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
 }
- 
-.btn:hover{
-background:#256f47;
+
+.btn:hover,
+.btn:focus {
+    background-color: var(--couleur-principale-foncee);
+    border-color: var(--couleur-principale-foncee);
+    color: var(--couleur-blanche);
+    transform: translateY(-2px);
 }
- 
+
+#hero .btn {
+    margin-top: 10px;
+    background-color: var(--couleur-blanche);
+    color: var(--couleur-principale-foncee);
+    border-color: var(--couleur-blanche);
+}
+
+#hero .btn:hover,
+#hero .btn:focus {
+    background-color: transparent;
+    color: var(--couleur-blanche);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: var(--couleur-principale);
+}
+
+.btn-urgence {
+    background-color: var(--couleur-urgence);
+    border-color: var(--couleur-urgence);
+}
+
+.btn-urgence:hover,
+.btn-urgence:focus {
+    background-color: var(--couleur-urgence-foncee);
+    border-color: var(--couleur-urgence-foncee);
+}
+
+.section-action {
+    margin-top: 30px;
+    text-align: center;
+}
+
+
 /* =========================
 SERVICES
 ========================= */
- 
-.service-grid{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-gap:20px;
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
- 
-.service-grid article{
-background:white;
-padding:20px;
-border-radius:12px;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+
+.service-grid article {
+    padding: 25px;
+    background-color: var(--couleur-blanche);
+    border-top: 4px solid var(--couleur-principale);
+    border-radius: 12px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
- 
-.service-grid h3{
-color:#2E8B57;
-margin-bottom:10px;
+
+.service-grid article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
 }
- 
+
+.service-grid h3 {
+    color: var(--couleur-principale);
+}
+
+.service-grid p {
+    margin-bottom: 0;
+    color: var(--couleur-texte-clair);
+}
+
+
 /* =========================
-HORAIRES
+HORAIRES ET URGENCES
 ========================= */
- 
-#horaires ul{
-padding-left:20px;
+
+#informations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
 }
- 
+
+#horaires,
+#urgence {
+    padding: 30px;
+    background-color: var(--couleur-blanche);
+    border-radius: 15px;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.08);
+}
+
+#horaires ul {
+    list-style: none;
+}
+
+#horaires li {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 0;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+#horaires li:last-child {
+    border-bottom: none;
+}
+
+#horaires li span:first-child {
+    font-weight: bold;
+}
+
+#urgence {
+    background-color: #fff5f5;
+    border-left: 5px solid var(--couleur-urgence);
+}
+
+#urgence h2 {
+    color: var(--couleur-urgence);
+}
+
+
 /* =========================
-IMAGES
+CONTACT
 ========================= */
- 
-img{
-max-width:100%;
-height:auto;
-border-radius:12px;
+
+#contact {
+    padding: 35px;
+    background-color: var(--couleur-claire);
+    border-radius: 15px;
 }
- 
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.contact-grid div {
+    padding: 20px;
+    background-color: var(--couleur-blanche);
+    border-radius: 10px;
+}
+
+.contact-grid h3 {
+    color: var(--couleur-principale);
+}
+
+.contact-grid p {
+    margin-bottom: 0;
+}
+
+.contact-grid a {
+    word-break: break-word;
+}
+
+
 /* =========================
 FOOTER
 ========================= */
- 
-footer{
-background:#333;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:50px;
+
+footer {
+    padding: 25px 20px;
+    background-color: var(--couleur-footer);
+    color: var(--couleur-blanche);
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+
+/* =========================
+AFFICHAGE SUR TABLETTE
+========================= */
+
+@media screen and (max-width: 900px) {
+
+    .service-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #informations {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* =========================
+AFFICHAGE SUR TÉLÉPHONE
+========================= */
+
+@media screen and (max-width: 600px) {
+
+    header {
+        padding: 20px;
+    }
+
+    .logo h1 {
+        font-size: 1.6rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+        padding: 8px 0;
+    }
+
+    main {
+        padding: 30px 15px;
+    }
+
+    section {
+        margin-bottom: 50px;
+    }
+
+    #hero {
+        padding: 45px 25px;
+        border-radius: 14px;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    #horaires,
+    #urgence,
+    #contact {
+        padding: 25px 20px;
+    }
+
+    #horaires li {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
 }
